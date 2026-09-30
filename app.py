@@ -114,7 +114,7 @@ def hybrid_search(query: str, top_dense_sparse: int = 15, final_k: int = 4):
 
 
 # --- UI and Chat Execution ---
-st.title("📋 Scrum Guide Assistant")
+st.title("Scrum Guide Assistant")
 st.caption("Hybrid RAG (FAISS + BM25 + Cross-Encoder) powered by Llama 3 on Groq.")
 
 # Initialize session state for conversation
