@@ -17,7 +17,7 @@ st.set_page_config(
 FAISS_PATH = "data/index.faiss"
 METADATA_PATH = "data/metadata.pkl"
 CROSS_ENCODER_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
-GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_MODEL = "openai/gpt-oss-120b"
 
 
 # --- Resource Caching ---
