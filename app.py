@@ -136,8 +136,8 @@ def stream_groq_response(prompt_text, system_instruction):
 
 
 # --- UI & Chat ---
-st.title("📋 Scrum Guide Assistant")
-st.caption("Hybrid Search RAG (FAISS + BM25 + Cross-Encoder) powered by Llama 3.3 on Groq.")
+st.title("Scrum Guide Assistant")
+st.caption("Hybrid Search RAG (FAISS + BM25 + Cross-Encoder) powered by Openai gpt on Groq.")
 
 if "messages" not in st.session_state:
     st.session_state.messages = [
@@ -172,7 +172,7 @@ if prompt := st.chat_input("E.g., What are the responsibilities of the Scrum Mas
     with st.chat_message("assistant"):
         response_text = st.write_stream(stream_groq_response(prompt, system_prompt))
         
-        with st.expander("🔍 View Retrieved Sources & Reranker Confidence"):
+        with st.expander("View Retrieved Sources & Reranker Confidence"):
             for chunk, score in top_chunks:
                 st.markdown(f"**Page {chunk['page']}** (Score: `{score:.3f}`)")
                 st.write(chunk["content"])
